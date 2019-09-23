@@ -60,9 +60,9 @@ class Game():
     def victory(self, own):
         helper.clear()
         if own.name != 'CPU':
-            print("Congratulations " + own.name + ", you've won.")
+            print(f"Congratulations {own.name}, you've won.")
         else:
-            print('Unfortunately, but the computer did beat you...')
+            print('Unfortunately, the computer did beat you...')
         while True:
             new_game = input("Do you want to play a new game? (y, n) ").lower()
             if new_game == 'y':
@@ -118,9 +118,9 @@ def insert_position(player, ship, starting):
     """Insert a valid position (e.g. B2)."""
     while True:
         if starting:
-            position = input(player.name +  ", where do you want to place your " + ship[0] + "(" + str(ship[1]) + ")? ").upper()
+            position = input(f"{player.name} , where do you want to place your {ship[0]} ({str(ship[1])})? ").upper()
         else:
-            position = input(player.name +  ", where do you want to shoot? ").upper()
+            position = input(f"{player.name}, where do you want to shoot? ").upper()
         try:
             if (position[0] in ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']) and (int(position[1:]) in range(1, 11)):
                 return position

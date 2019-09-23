@@ -19,7 +19,7 @@ def main():
         if option == '1' or option == '2' or option == '3':
             break
         else:
-            print('Enter a valid option!\n')
+            print('Please select a valid option\n')
 
     if option == '1':
         player1 = Player(input("Player 1, enter your name please: "))
