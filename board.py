@@ -24,10 +24,11 @@ class Board(Box):
             print(index, end = end)
             index += 1
             for element in line:
-                if (element.symbol != '.' and element.is_visible == True) or person == 'own':
-                    print(element.symbol, end = " ")
-                else:
-                    print(end = ". ")
+                # if (element.symbol != '.' and element.is_visible == True) or person == 'own':
+                #     print(element.symbol, end = " ")
+                # else:
+                #     print(end = ". ")
+                print(element.symbol, end=" ")
             print('')
         print('')
 
